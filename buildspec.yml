@@ -4,7 +4,6 @@ phases:
   pre_build:
     commands:
       - echo Changing Directory into the aws_watermrk directory
-      - cd aws_watermark
       - echo Logging in to Amazon ECR...
       - ECR_LOGIN_PASSWORD=$(aws ecr get-login-password --region $AWS_DEFAULT_REGION)
       - echo $ECR_LOGIN_PASSWORD | docker login --username AWS --password-stdin $ECR_REPOSITORY_URI
