@@ -1,5 +1,6 @@
 import boto3
 import uuid
+from parameters import OUTPUT_BUCKET
 
 # This is just a sample script to stress test the watermarking application
 # It will upload the same file to S3 multiple times
@@ -29,7 +30,8 @@ def upload_file_to_s3(file_name, bucket_name, prefix):
             
 # Example usage
 if __name__ == "__main__":
+    
     file_name = "image.png"  # Assume the file is in the current directory
-    bucket_name = "sqsimagewatermarker"
-    prefix = "input"
+    bucket_name = OUTPUT_BUCKET # This should be the same as the input bucket so using it here to avoid hardcoing it.
+    prefix = "input" # Change this if you changed your input bucket prefix
     upload_file_to_s3(file_name, bucket_name, prefix)
