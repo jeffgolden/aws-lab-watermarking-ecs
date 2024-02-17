@@ -7,9 +7,11 @@
 - S3
 - SNS
 - SQS
-- ECS - *Not Demonstrated in the code*
+- ECS
+- ECR
+- CodeDeploy
 - Parameter Store
-- IAM - *Not Demonstrated in the code*
+- IAM
 
 ## Description
 
@@ -21,4 +23,3 @@ The purpose of this lab is to provide me with practical experience implementing 
 
 - Currently, files uploaded with a plus (+) symbol in the filename fail to process.
 - Works only with PNG files now (or at least formats that PIL can understand and have an alpha layer)
-
